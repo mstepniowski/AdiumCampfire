@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C0809DE115905FC0085372B /* MSAdiumCampfirePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0809D9115905FC0085372B /* MSAdiumCampfirePlugin.m */; };
+		8C0809DF115905FC0085372B /* MSCampfireAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0809DB115905FC0085372B /* MSCampfireAccount.m */; };
+		8C0809E0115905FC0085372B /* MSCampfireService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0809DD115905FC0085372B /* MSCampfireService.m */; };
+		8C0809F71159070F0085372B /* DDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0809EF1159070F0085372B /* DDAsyncSocket.m */; };
+		8C0809F91159070F0085372B /* MSCampfireEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0809F21159070F0085372B /* MSCampfireEngine.m */; };
+		8C0809FA1159070F0085372B /* MSHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0809F41159070F0085372B /* MSHTTPConnection.m */; };
+		8C0809FB1159070F0085372B /* NSNumber+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0809F61159070F0085372B /* NSNumber+Conversion.m */; };
+		8C080A091159071D0085372B /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0809FE1159071D0085372B /* NSObject+SBJSON.m */; };
+		8C080A0A1159071D0085372B /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C080A001159071D0085372B /* NSString+SBJSON.m */; };
+		8C080A0B1159071D0085372B /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C080A021159071D0085372B /* SBJSON.m */; };
+		8C080A0C1159071D0085372B /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C080A041159071D0085372B /* SBJsonBase.m */; };
+		8C080A0D1159071D0085372B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C080A061159071D0085372B /* SBJsonParser.m */; };
+		8C080A0E1159071D0085372B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C080A081159071D0085372B /* SBJsonWriter.m */; };
+		8C080A171159076A0085372B /* MSCampfireAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C080A161159076A0085372B /* MSCampfireAccountViewController.m */; };
+		8C74D86F117DE75900701FA7 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C74D86E117DE75900701FA7 /* NSString+UUID.m */; };
+		8C74D872117DE7E100701FA7 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C74D871117DE7E100701FA7 /* NSData+Base64.m */; };
+		8CAA9F6A12BD793300F16CF7 /* campfire-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA9F6812BD793300F16CF7 /* campfire-small.png */; };
+		8CAA9F6B12BD793300F16CF7 /* campfire.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA9F6912BD793300F16CF7 /* campfire.png */; };
+		8CD7DF6611624AB4006A6216 /* MSCampfireRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD7DF6511624AB4006A6216 /* MSCampfireRoom.m */; };
+		8CEF459B11F36F2B00F96727 /* CompilerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF459A11F36F2B00F96727 /* CompilerTest.m */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CEF458B11F36E4600F96727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = AdiumCampfire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF630370AF2F00C91783 /* AdiumCampfire_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdiumCampfire_Prefix.pch; sourceTree = "<group>"; };
+		8C0809D8115905FC0085372B /* MSAdiumCampfirePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdiumCampfirePlugin.h; sourceTree = "<group>"; };
+		8C0809D9115905FC0085372B /* MSAdiumCampfirePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAdiumCampfirePlugin.m; sourceTree = "<group>"; };
+		8C0809DA115905FC0085372B /* MSCampfireAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCampfireAccount.h; sourceTree = "<group>"; };
+		8C0809DB115905FC0085372B /* MSCampfireAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCampfireAccount.m; sourceTree = "<group>"; };
+		8C0809DC115905FC0085372B /* MSCampfireService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCampfireService.h; sourceTree = "<group>"; };
+		8C0809DD115905FC0085372B /* MSCampfireService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCampfireService.m; sourceTree = "<group>"; };
+		8C0809EE1159070F0085372B /* DDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAsyncSocket.h; sourceTree = "<group>"; };
+		8C0809EF1159070F0085372B /* DDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAsyncSocket.m; sourceTree = "<group>"; };
+		8C0809F11159070F0085372B /* MSCampfireEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCampfireEngine.h; sourceTree = "<group>"; };
+		8C0809F21159070F0085372B /* MSCampfireEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCampfireEngine.m; sourceTree = "<group>"; };
+		8C0809F31159070F0085372B /* MSHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHTTPConnection.h; sourceTree = "<group>"; };
+		8C0809F41159070F0085372B /* MSHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHTTPConnection.m; sourceTree = "<group>"; };
+		8C0809F51159070F0085372B /* NSNumber+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Conversion.h"; sourceTree = "<group>"; };
+		8C0809F61159070F0085372B /* NSNumber+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Conversion.m"; sourceTree = "<group>"; };
+		8C0809FC1159071D0085372B /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		8C0809FD1159071D0085372B /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		8C0809FE1159071D0085372B /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		8C0809FF1159071D0085372B /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		8C080A001159071D0085372B /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		8C080A011159071D0085372B /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		8C080A021159071D0085372B /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		8C080A031159071D0085372B /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		8C080A041159071D0085372B /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		8C080A051159071D0085372B /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		8C080A061159071D0085372B /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		8C080A071159071D0085372B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		8C080A081159071D0085372B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		8C080A151159076A0085372B /* MSCampfireAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCampfireAccountViewController.h; sourceTree = "<group>"; };
+		8C080A161159076A0085372B /* MSCampfireAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCampfireAccountViewController.m; sourceTree = "<group>"; };
+		8C74D86D117DE75900701FA7 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
+		8C74D86E117DE75900701FA7 /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
+		8C74D870117DE7E100701FA7 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		8C74D871117DE7E100701FA7 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		8C96D3E2123D5078001ED506 /* AdiumCampfire.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdiumCampfire.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CAA9F6812BD793300F16CF7 /* campfire-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "campfire-small.png"; sourceTree = "<group>"; };
+		8CAA9F6912BD793300F16CF7 /* campfire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campfire.png; sourceTree = "<group>"; };
+		8CD7DF6411624AB4006A6216 /* MSCampfireRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCampfireRoom.h; sourceTree = "<group>"; };
+		8CD7DF6511624AB4006A6216 /* MSCampfireRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCampfireRoom.m; sourceTree = "<group>"; };
+		8CEF458611F36E0D00F96727 /* AdiumCampfireTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdiumCampfireTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEF458711F36E0D00F96727 /* AdiumCampfireTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdiumCampfireTest-Info.plist"; sourceTree = "<group>"; };
+		8CEF459911F36F2B00F96727 /* CompilerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerTest.h; sourceTree = "<group>"; };
+		8CEF459A11F36F2B00F96727 /* CompilerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompilerTest.m; sourceTree = "<group>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CEF458311F36E0D00F96727 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* AdiumCampfire */ = {
+			isa = PBXGroup;
+			children = (
+				8C0809D7115905EF0085372B /* Source */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+				8CEF458711F36E0D00F96727 /* AdiumCampfireTest-Info.plist */,
+				8CEF459911F36F2B00F96727 /* CompilerTest.h */,
+				8CEF459A11F36F2B00F96727 /* CompilerTest.m */,
+			);
+			name = AdiumCampfire;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CAA9F6812BD793300F16CF7 /* campfire-small.png */,
+				8CAA9F6912BD793300F16CF7 /* campfire.png */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CEF458611F36E0D00F96727 /* AdiumCampfireTest.octest */,
+				8C96D3E2123D5078001ED506 /* AdiumCampfire.AdiumPlugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* AdiumCampfire_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		8C0809D7115905EF0085372B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8C0809E3115906620085372B /* MSCampfireEngine */,
+				8C080A151159076A0085372B /* MSCampfireAccountViewController.h */,
+				8C080A161159076A0085372B /* MSCampfireAccountViewController.m */,
+				8C0809D8115905FC0085372B /* MSAdiumCampfirePlugin.h */,
+				8C0809D9115905FC0085372B /* MSAdiumCampfirePlugin.m */,
+				8C0809DA115905FC0085372B /* MSCampfireAccount.h */,
+				8C0809DB115905FC0085372B /* MSCampfireAccount.m */,
+				8C0809DC115905FC0085372B /* MSCampfireService.h */,
+				8C0809DD115905FC0085372B /* MSCampfireService.m */,
+				8CD7DF6411624AB4006A6216 /* MSCampfireRoom.h */,
+				8CD7DF6511624AB4006A6216 /* MSCampfireRoom.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8C0809E3115906620085372B /* MSCampfireEngine */ = {
+			isa = PBXGroup;
+			children = (
+				8C0809EE1159070F0085372B /* DDAsyncSocket.h */,
+				8C0809EF1159070F0085372B /* DDAsyncSocket.m */,
+				8C0809F11159070F0085372B /* MSCampfireEngine.h */,
+				8C0809F21159070F0085372B /* MSCampfireEngine.m */,
+				8C0809F31159070F0085372B /* MSHTTPConnection.h */,
+				8C0809F41159070F0085372B /* MSHTTPConnection.m */,
+				8C0809F51159070F0085372B /* NSNumber+Conversion.h */,
+				8C0809F61159070F0085372B /* NSNumber+Conversion.m */,
+				8C0809E41159066A0085372B /* JSON */,
+				8C74D86D117DE75900701FA7 /* NSString+UUID.h */,
+				8C74D86E117DE75900701FA7 /* NSString+UUID.m */,
+				8C74D870117DE7E100701FA7 /* NSData+Base64.h */,
+				8C74D871117DE7E100701FA7 /* NSData+Base64.m */,
+			);
+			path = MSCampfireEngine;
+			sourceTree = "<group>";
+		};
+		8C0809E41159066A0085372B /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				8C0809FC1159071D0085372B /* JSON.h */,
+				8C0809FD1159071D0085372B /* NSObject+SBJSON.h */,
+				8C0809FE1159071D0085372B /* NSObject+SBJSON.m */,
+				8C0809FF1159071D0085372B /* NSString+SBJSON.h */,
+				8C080A001159071D0085372B /* NSString+SBJSON.m */,
+				8C080A011159071D0085372B /* SBJSON.h */,
+				8C080A021159071D0085372B /* SBJSON.m */,
+				8C080A031159071D0085372B /* SBJsonBase.h */,
+				8C080A041159071D0085372B /* SBJsonBase.m */,
+				8C080A051159071D0085372B /* SBJsonParser.h */,
+				8C080A061159071D0085372B /* SBJsonParser.m */,
+				8C080A071159071D0085372B /* SBJsonWriter.h */,
+				8C080A081159071D0085372B /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CEF458511F36E0D00F96727 /* AdiumCampfireTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CEF458A11F36E0E00F96727 /* Build configuration list for PBXNativeTarget "AdiumCampfireTest" */;
+			buildPhases = (
+				8CEF458111F36E0D00F96727 /* Resources */,
+				8CEF458211F36E0D00F96727 /* Sources */,
+				8CEF458311F36E0D00F96727 /* Frameworks */,
+				8CEF458411F36E0D00F96727 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CEF458C11F36E4600F96727 /* PBXTargetDependency */,
+			);
+			name = AdiumCampfireTest;
+			productName = AdiumCampfireTest;
+			productReference = 8CEF458611F36E0D00F96727 /* AdiumCampfireTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D5B49AC048680CD000E48DA /* AdiumCampfire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "AdiumCampfire" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdiumCampfire;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = AdiumCampfire;
+			productReference = 8C96D3E2123D5078001ED506 /* AdiumCampfire.AdiumPlugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "AdiumCampfire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* AdiumCampfire */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* AdiumCampfire */,
+				8CEF458511F36E0D00F96727 /* AdiumCampfireTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CEF458111F36E0D00F96727 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				8CAA9F6A12BD793300F16CF7 /* campfire-small.png in Resources */,
+				8CAA9F6B12BD793300F16CF7 /* campfire.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CEF458411F36E0D00F96727 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CEF458211F36E0D00F96727 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CEF459B11F36F2B00F96727 /* CompilerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C0809DE115905FC0085372B /* MSAdiumCampfirePlugin.m in Sources */,
+				8C0809DF115905FC0085372B /* MSCampfireAccount.m in Sources */,
+				8C0809E0115905FC0085372B /* MSCampfireService.m in Sources */,
+				8C0809F71159070F0085372B /* DDAsyncSocket.m in Sources */,
+				8C0809F91159070F0085372B /* MSCampfireEngine.m in Sources */,
+				8C0809FA1159070F0085372B /* MSHTTPConnection.m in Sources */,
+				8C0809FB1159070F0085372B /* NSNumber+Conversion.m in Sources */,
+				8C080A091159071D0085372B /* NSObject+SBJSON.m in Sources */,
+				8C080A0A1159071D0085372B /* NSString+SBJSON.m in Sources */,
+				8C080A0B1159071D0085372B /* SBJSON.m in Sources */,
+				8C080A0C1159071D0085372B /* SBJsonBase.m in Sources */,
+				8C080A0D1159071D0085372B /* SBJsonParser.m in Sources */,
+				8C080A0E1159071D0085372B /* SBJsonWriter.m in Sources */,
+				8C080A171159076A0085372B /* MSCampfireAccountViewController.m in Sources */,
+				8CD7DF6611624AB4006A6216 /* MSCampfireRoom.m in Sources */,
+				8C74D86F117DE75900701FA7 /* NSString+UUID.m in Sources */,
+				8C74D872117DE7E100701FA7 /* NSData+Base64.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CEF458C11F36E4600F96727 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D5B49AC048680CD000E48DA /* AdiumCampfire */;
+			targetProxy = 8CEF458B11F36E4600F96727 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(ADIUM)/build/Debug";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AdiumCampfire_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "$(ADIUM)/Source";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = AdiumCampfire;
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(ADIUM)/build/Debug";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AdiumCampfire_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "$(ADIUM)/Source";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = AdiumCampfire;
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADIUM = "$(HOME)/Projekty/Adium";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "$(ADIUM)/build/Debug";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(ADIUM)/Source";
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADIUM = "$(HOME)/Projekty/Adium";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "$(ADIUM)/build/Release";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(ADIUM)/Source";
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Release;
+		};
+		8CEF458811F36E0E00F96727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "AdiumCampfireTest-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = AdiumCampfireTest;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8CEF458911F36E0E00F96727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "AdiumCampfireTest-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = AdiumCampfireTest;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "AdiumCampfire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "AdiumCampfire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CEF458A11F36E0E00F96727 /* Build configuration list for PBXNativeTarget "AdiumCampfireTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CEF458811F36E0E00F96727 /* Debug */,
+				8CEF458911F36E0E00F96727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
