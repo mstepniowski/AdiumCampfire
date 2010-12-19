@@ -83,6 +83,7 @@
 		8C96D3E2123D5078001ED506 /* AdiumCampfire.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdiumCampfire.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAA9F6812BD793300F16CF7 /* campfire-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "campfire-small.png"; sourceTree = "<group>"; };
 		8CAA9F6912BD793300F16CF7 /* campfire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campfire.png; sourceTree = "<group>"; };
+		8CAA9FA812BD802E00F16CF7 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		8CD7DF6411624AB4006A6216 /* MSCampfireRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCampfireRoom.h; sourceTree = "<group>"; };
 		8CD7DF6511624AB4006A6216 /* MSCampfireRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCampfireRoom.m; sourceTree = "<group>"; };
 		8CEF458611F36E0D00F96727 /* AdiumCampfireTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdiumCampfireTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +124,7 @@
 				8CEF458711F36E0D00F96727 /* AdiumCampfireTest-Info.plist */,
 				8CEF459911F36F2B00F96727 /* CompilerTest.h */,
 				8CEF459A11F36F2B00F96727 /* CompilerTest.m */,
+				8CAA9FA812BD802E00F16CF7 /* README.markdown */,
 			);
 			name = AdiumCampfire;
 			sourceTree = "<group>";
