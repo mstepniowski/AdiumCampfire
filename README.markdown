@@ -15,11 +15,10 @@ Installation
 
 Usage
 -----
-1. Change the Campfire domain in the source code (Yes! There is no other way to change the domain currently).
-2. Start Adium.
-3. Navigate to `File->Add Account` in the menu and choose `Campfire` in the dropdown list.
-4. Put your Campfire username as username and your [API authentication token](https://setjam.campfirenow.com/member/edit) as password.
-5. All the Campfire rooms in the domain should be now available under the *Campfire* group.
+1. Start Adium.
+2. Navigate to `File->Add Account` in the menu and choose `Campfire` in the dropdown list.
+3. Put your Campfire domain as *Domain* and your [API authentication token](https://setjam.campfirenow.com/member/edit) as *API key*.
+4. After connecting, all the Campfire rooms in the domain should be now available under the *Campfire* group.
 
 License
 -------

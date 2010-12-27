@@ -16,6 +16,11 @@
 //  return nil;
 //}
 
+- (NSString *)nibName
+{
+  return @"MSCampfireAccountView";
+}
+
 - (NSView *)optionsView
 {
   return nil;

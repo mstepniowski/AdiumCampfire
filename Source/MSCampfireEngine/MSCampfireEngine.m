@@ -38,12 +38,13 @@
 
 @implementation MSCampfireEngine
 
-- (MSCampfireEngine *)initWithKey:(NSString *)key delegate:(NSObject *)newDelegate 
+- (MSCampfireEngine *)initWithDomain:(NSString *)domain key:(NSString *)key delegate:(NSObject *)newDelegate 
 {
+  AILog(@"%@: %@ %@", self, domain, key);
   if ((self = [super init])) {
     delegate = newDelegate;
     _secureConnection = YES;
-    _APIDomain = @"setjam.campfirenow.com";
+    _APIDomain = [domain retain];
     _key = [key retain];
     connections = [[NSMutableDictionary alloc] init];
   }
@@ -53,6 +54,7 @@
 - (void)dealloc
 {
   [_key release];
+  [_APIDomain release];
   [connections release];
   [super dealloc];
 }

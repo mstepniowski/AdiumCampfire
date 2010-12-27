@@ -46,10 +46,6 @@
   AILogWithSignature(@"%@", self.UID);
 }
 
-- (NSString *)accountWillSetUID:(NSString *)proposedUID {
-  return @"235492";
-}
-
 - (void)dealloc
 {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -70,7 +66,7 @@
     
   [self setConnectionProgress:[NSNumber numberWithDouble:0.3] message:@"Connecting"];
   [engine release]; engine = nil;
-  engine = [[MSCampfireEngine alloc] initWithKey:self.passwordWhileConnected delegate:self];
+  engine = [[MSCampfireEngine alloc] initWithDomain:self.UID key:self.passwordWhileConnected delegate:self];
   
   [engine getRooms];
 }

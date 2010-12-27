@@ -29,7 +29,7 @@
   NSMutableDictionary *connections;
 }
 
-- (MSCampfireEngine *)initWithKey:(NSString *)key delegate:(NSObject *)newDelegate;
+- (MSCampfireEngine *)initWithDomain: (NSString *)domain key:(NSString *)key delegate:(NSObject *)newDelegate;
 
 - (void)getRooms;
 - (void)getRoomInformationFor:(NSInteger)roomId;

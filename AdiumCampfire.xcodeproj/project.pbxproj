@@ -26,6 +26,7 @@
 		8CAA9F6A12BD793300F16CF7 /* campfire-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA9F6812BD793300F16CF7 /* campfire-small.png */; };
 		8CAA9F6B12BD793300F16CF7 /* campfire.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA9F6912BD793300F16CF7 /* campfire.png */; };
 		8CD7DF6611624AB4006A6216 /* MSCampfireRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD7DF6511624AB4006A6216 /* MSCampfireRoom.m */; };
+		8CDF389F12C9449B004AC128 /* MSCampfireAccountView.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8CDF389E12C9449A004AC128 /* MSCampfireAccountView.nib */; };
 		8CEF459B11F36F2B00F96727 /* CompilerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF459A11F36F2B00F96727 /* CompilerTest.m */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
@@ -86,6 +87,7 @@
 		8CAA9FA812BD802E00F16CF7 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		8CD7DF6411624AB4006A6216 /* MSCampfireRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCampfireRoom.h; sourceTree = "<group>"; };
 		8CD7DF6511624AB4006A6216 /* MSCampfireRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCampfireRoom.m; sourceTree = "<group>"; };
+		8CDF389E12C9449A004AC128 /* MSCampfireAccountView.nib */ = {isa = PBXFileReference; explicitFileType = wrapper.nib; path = MSCampfireAccountView.nib; sourceTree = "<group>"; };
 		8CEF458611F36E0D00F96727 /* AdiumCampfireTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdiumCampfireTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEF458711F36E0D00F96727 /* AdiumCampfireTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdiumCampfireTest-Info.plist"; sourceTree = "<group>"; };
 		8CEF459911F36F2B00F96727 /* CompilerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerTest.h; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8CDF389E12C9449A004AC128 /* MSCampfireAccountView.nib */,
 				8CAA9F6812BD793300F16CF7 /* campfire-small.png */,
 				8CAA9F6912BD793300F16CF7 /* campfire.png */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
@@ -319,6 +322,7 @@
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
 				8CAA9F6A12BD793300F16CF7 /* campfire-small.png in Resources */,
 				8CAA9F6B12BD793300F16CF7 /* campfire.png in Resources */,
+				8CDF389F12C9449B004AC128 /* MSCampfireAccountView.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,7 +49,7 @@
 	return @"Campfire";
 }
 - (NSCharacterSet *)allowedCharacters{
-	return [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_"];
+	return [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-."];
 }
 - (NSUInteger)allowedLength{
 	return 999;
