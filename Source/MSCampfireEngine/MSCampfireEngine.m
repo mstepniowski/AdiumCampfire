@@ -113,7 +113,6 @@
   NSString *path = [NSString stringWithFormat:@"/room/%d/speak.json", roomId];
   
   NSMutableDictionary *messageDict = [NSMutableDictionary dictionaryWithCapacity:2];
-  [messageDict setObject:@"TextMessage" forKey:@"type"];
   [messageDict setObject:message forKey:@"body"];
   NSMutableDictionary *wrapper = [NSMutableDictionary dictionaryWithCapacity:1];
   [wrapper setObject:messageDict forKey:@"message"];
