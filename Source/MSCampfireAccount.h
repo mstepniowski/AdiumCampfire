@@ -14,6 +14,7 @@
   NSMutableDictionary *_rooms;
   NSData *lastRoomsUpdate;
   NSInteger updatedRoomsCount;
+  NSInteger authenticatedUserId;
 }
 
 @property (readonly, nonatomic) NSString *defaultServer;

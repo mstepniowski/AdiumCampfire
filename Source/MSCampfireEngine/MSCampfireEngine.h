@@ -17,7 +17,7 @@
 - (void)didReceiveRoomInformation:(NSDictionary *)room;
 - (void)didReceiveInformationForUser:(NSDictionary *)user;
 - (void)didReceiveMessage:(NSDictionary *)message;
-
+- (void)didReceiveInformationForAuthenticatedUser:(NSDictionary *)user;
 @end
 
 
@@ -34,6 +34,7 @@
 - (void)getRooms;
 - (void)getRoomInformationFor:(NSInteger)roomId;
 - (void)getInformationForUser:(NSInteger)userId;
+- (void)getInformationForAuthenticatedUser;
 - (void)joinRoom:(NSInteger)roomId;
 - (void)leaveRoom:(NSInteger)roomId;
 - (void)sendTextMessage:(NSString *)message toRoom:(NSInteger)roomId;

@@ -34,6 +34,7 @@
   _rooms = [[NSMutableDictionary alloc] init];
   lastRoomsUpdate = nil;
   updatedRoomsCount = 0;
+  authenticatedUserId = -1;
   
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(chatDidOpen:)
@@ -68,6 +69,7 @@
   [engine release]; engine = nil;
   engine = [[MSCampfireEngine alloc] initWithDomain:self.UID key:self.passwordWhileConnected delegate:self];
   
+  [engine getInformationForAuthenticatedUser];
   [engine getRooms];
 }
 
@@ -289,14 +291,17 @@
   NSString *messageType = [message objectForKey:@"type"];
   if ([messageType isEqualTo:@"TextMessage"] || [messageType isEqualTo:@"PasteMessage"]) {
     NSNumber *contactId = [message objectForKey:@"user_id"];
-    AIContentMessage *contentMessage = [AIContentMessage messageInChat:chat
-                                                            withSource:[self contactWithUID:[contactId stringValue]]
-                                                           destination:self
-                                                                  date:[NSDate date]
-                                                               message:msg
-                                                             autoreply:NO];
-    
-    [adium.contentController receiveContentObject:contentMessage];    
+    AILogWithSignature(@"My ID=%d, Sender ID=%@", authenticatedUserId, contactId);
+    if( authenticatedUserId != [contactId integerValue] ) {
+      AIContentMessage *contentMessage = [AIContentMessage messageInChat:chat
+                                                              withSource:[self contactWithUID:[contactId stringValue]]
+                                                             destination:self
+                                                                    date:[NSDate date]
+                                                                 message:msg
+                                                               autoreply:NO];
+      
+      [adium.contentController receiveContentObject:contentMessage];    
+    }
   } else if ([messageType isEqualTo:@"EnterMessage"]) {
     NSNumber *contactId = [message objectForKey:@"user_id"];
     [[_rooms objectForKey:roomId] addContactWithUID:[contactId integerValue]];
@@ -304,6 +309,14 @@
   } else {
     NSLog(@"message = %@", message);
   } 
+}
+
+- (void)didReceiveInformationForAuthenticatedUser:(NSDictionary *)user
+{
+  NSString *authenticatedUserIdAsString = [[user objectForKey:@"user"] objectForKey:@"id"];
+  AILogWithSignature(@"auth string = %@", authenticatedUserIdAsString);
+  authenticatedUserId = [authenticatedUserIdAsString integerValue];
+  AILogWithSignature(@"Authenticated User ID = %d", authenticatedUserId);
 }
 
 

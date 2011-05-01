@@ -17,6 +17,7 @@
 #define LEAVE @"leave"
 #define SPEAK @"speak"
 #define USER_INFORMATION @"user information"
+#define AUTHENTICATED_USER_INFORMATION @"authenticated user information"
 
 @interface MSCampfireEngine (Private)
 
@@ -40,6 +41,7 @@
 
 - (MSCampfireEngine *)initWithDomain:(NSString *)domain key:(NSString *)key delegate:(NSObject *)newDelegate 
 {
+  AILog(@"initWithDomain");
   AILog(@"%@: %@ %@", self, domain, key);
   if ((self = [super init])) {
     delegate = newDelegate;
@@ -74,6 +76,12 @@
 {
   NSString *path = [NSString stringWithFormat:@"/users/%d.json", userId];
   [self startRequestWithMethod:@"GET" path:path streaming:NO key:path userInfo:USER_INFORMATION];
+}
+
+- (void)getInformationForAuthenticatedUser
+{
+  NSString *path = @"/users/me.json";
+  [self startRequestWithMethod:@"GET" path:path streaming:NO key:path userInfo:AUTHENTICATED_USER_INFORMATION];
 }
 
 - (void)joinRoom:(NSInteger)roomId
@@ -189,6 +197,12 @@
       NSDictionary *d = [body JSONValue];
       [delegate didReceiveInformationForUser:d];
     }
+  } else if([[connection identifier] isEqualTo:AUTHENTICATED_USER_INFORMATION]) {
+    if ([delegate respondsToSelector:@selector(didReceiveInformationForAuthenticatedUser:)]) {
+      NSDictionary *d = [body JSONValue];
+      [delegate didReceiveInformationForAuthenticatedUser:d];
+    }
+    AILogWithSignature(@"auth information = %@", body);
   }
   
   else if ([[connection identifier] respondsToSelector:@selector(objectForKey:)]) {
