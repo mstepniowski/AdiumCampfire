@@ -18,6 +18,7 @@
 #define SPEAK @"speak"
 #define USER_INFORMATION @"user information"
 #define AUTHENTICATED_USER_INFORMATION @"authenticated user information"
+#define UPLOAD_INFORMATION @"upload information"
 
 @interface MSCampfireEngine (Private)
 
@@ -82,6 +83,12 @@
 {
   NSString *path = @"/users/me.json";
   [self startRequestWithMethod:@"GET" path:path streaming:NO key:path userInfo:AUTHENTICATED_USER_INFORMATION];
+}
+
+- (void)getUploadForId:(NSInteger)uploadId inRoom:(NSInteger)roomId
+{
+  NSString *path = [NSString stringWithFormat:@"/room/%d/messages/%d/upload.json", roomId, uploadId];
+  [self startRequestWithMethod:@"GET" path:path streaming:NO key:path userInfo:UPLOAD_INFORMATION];
 }
 
 - (void)joinRoom:(NSInteger)roomId
@@ -203,6 +210,12 @@
       [delegate didReceiveInformationForAuthenticatedUser:d];
     }
     AILogWithSignature(@"auth information = %@", body);
+  } else if([[connection identifier] isEqualTo:UPLOAD_INFORMATION]) {
+    if ([delegate respondsToSelector:@selector(didReceiveUpload:)]) {
+      NSDictionary *d = [body JSONValue];
+      [delegate didReceiveUpload:d];
+    }
+    AILogWithSignature(@"upload information = %@", body);
   }
   
   else if ([[connection identifier] respondsToSelector:@selector(objectForKey:)]) {

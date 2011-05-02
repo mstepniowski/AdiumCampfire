@@ -18,6 +18,7 @@
 - (void)didReceiveInformationForUser:(NSDictionary *)user;
 - (void)didReceiveMessage:(NSDictionary *)message;
 - (void)didReceiveInformationForAuthenticatedUser:(NSDictionary *)user;
+- (void)didReceiveUpload:(NSDictionary *)upload;
 @end
 
 
@@ -38,6 +39,7 @@
 - (void)joinRoom:(NSInteger)roomId;
 - (void)leaveRoom:(NSInteger)roomId;
 - (void)sendTextMessage:(NSString *)message toRoom:(NSInteger)roomId;
+- (void)getUploadForId:(NSInteger)uploadId inRoom:(NSInteger)roomId;
 
 // Streaming API
 - (void)startListeningForMessagesInRoom:(NSInteger)roomId;
