@@ -34,6 +34,7 @@
   _rooms = [[NSMutableDictionary alloc] init];
   lastRoomsUpdate = nil;
   updatedRoomsCount = 0;
+  authenticatedUserId = -1;
   
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(chatDidOpen:)
@@ -68,6 +69,7 @@
   [engine release]; engine = nil;
   engine = [[MSCampfireEngine alloc] initWithDomain:self.UID key:self.passwordWhileConnected delegate:self];
   
+  [engine getInformationForAuthenticatedUser];
   [engine getRooms];
 }
 
@@ -289,21 +291,54 @@
   NSString *messageType = [message objectForKey:@"type"];
   if ([messageType isEqualTo:@"TextMessage"] || [messageType isEqualTo:@"PasteMessage"]) {
     NSNumber *contactId = [message objectForKey:@"user_id"];
-    AIContentMessage *contentMessage = [AIContentMessage messageInChat:chat
-                                                            withSource:[self contactWithUID:[contactId stringValue]]
-                                                           destination:self
-                                                                  date:[NSDate date]
-                                                               message:msg
-                                                             autoreply:NO];
-    
-    [adium.contentController receiveContentObject:contentMessage];    
+    AILogWithSignature(@"My ID=%d, Sender ID=%@", authenticatedUserId, contactId);
+    if( authenticatedUserId != [contactId integerValue] ) {
+      AIContentMessage *contentMessage = [AIContentMessage messageInChat:chat
+                                                              withSource:[self contactWithUID:[contactId stringValue]]
+                                                             destination:self
+                                                                    date:[NSDate date]
+                                                                 message:msg
+                                                               autoreply:NO];
+      
+      [adium.contentController receiveContentObject:contentMessage];    
+    }
   } else if ([messageType isEqualTo:@"EnterMessage"]) {
     NSNumber *contactId = [message objectForKey:@"user_id"];
     [[_rooms objectForKey:roomId] addContactWithUID:[contactId integerValue]];
     [chat addParticipatingListObject:[self contactWithUID:[contactId stringValue]] notify:NotifyNow];
+  } else if ([messageType isEqualTo:@"UploadMessage"]) {
+    // If this is an upload message, ask the engine to get the upload details
+    NSNumber *uploadId = [message objectForKey:@"id"];
+    NSNumber *roomId = [message objectForKey:@"room_id"];
+    [engine getUploadForId:[uploadId integerValue] inRoom:[roomId integerValue]];
   } else {
     NSLog(@"message = %@", message);
   } 
+}
+
+- (void)didReceiveInformationForAuthenticatedUser:(NSDictionary *)user
+{
+  NSString *authenticatedUserIdAsString = [[user objectForKey:@"user"] objectForKey:@"id"];
+  authenticatedUserId = [authenticatedUserIdAsString integerValue];
+  AILogWithSignature(@"Authenticated User ID = %d", authenticatedUserId);
+}
+
+- (void)didReceiveUpload:(NSDictionary *)upload
+{
+  NSDictionary *data = [upload objectForKey:@"upload"];
+  NSNumber *contactId = [data objectForKey:@"user_id"];
+  NSAttributedString *msg = [[NSAttributedString alloc] initWithString:[data objectForKey:@"full_url"]];
+  NSNumber *roomId = [data objectForKey:@"room_id"];
+  AIChat *chat = [self chatWithName:[roomId stringValue]];
+  
+  AIContentMessage *contentMessage = [AIContentMessage messageInChat:chat
+                                                          withSource:[self contactWithUID:[contactId stringValue]]
+                                                         destination:self
+                                                                date:[NSDate date]
+                                                             message:msg
+                                                           autoreply:NO];
+  
+  [adium.contentController receiveContentObject:contentMessage]; 
 }
 
 
